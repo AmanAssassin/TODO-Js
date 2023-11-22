@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Todo-List</title>
+</head>
+
+<body>
+    <!-- This is the background image -->
+    <div class="background">
+        <!-- This is the main content area of the page -->
+    <div class="content-area">
+        <!-- The heading of the page -->
+        <div class="heading">
+            <h1>todo</h1>
+        </div>
+        <!-- The input field for creating new todos -->
+        <div class="text-field">
+            <img src="/assets/todo-icon.svg" alt="todo" id="todo-icon">
+            <input type="text" placeholder="Create a new todo list..">
+        </div>
+        <!-- The container for all the todos -->
+        <div class="todo-container">
+            <!-- Each todo will be added here -->
+        </div>
+        <!-- The information section about the todos -->
+        <div class="todo-info">
+            <!-- The number of tasks left to complete -->
+            <div>
+                <span id="todo-left"><span id="tasksLeft">0</span>Tasks left</span>
+            </div>
+            <!-- Button to clear all completed todos -->
+            <div>
+                <span class="clear-todo">Clear Completed</span>
+            </div>
+            <!-- Buttons to filter todos -->
+            <div class="multi-option">
+                <span class="active all-todo">All</span>
+                <span class="uncomplete-todo">Uncomplete</span>
+                <span class="completed-todo">Completed</span>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="main.js"></script>
+</body>
+
+</html>
