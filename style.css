@@ -1,9 +1,24 @@
-/* Import the Open Sans font from Google Fonts */
+/* Import the  Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;1,400&display=swap');
 
-/* Set custom CSS variables with specific color values */
+/* Neon effect for TODO heading */
+.heading h1 {
+    font-weight: 600;
+    font-size: 2.77rem;
+    line-height: 3.77rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #fff; /* White color for normal text */
+    text-shadow: 0 0 10px rgb(182, 55, 236), 0 0 20px rgb(30, 166, 204), 0 0 30px rgb(63, 69, 225), 0 0 40px rgba(255, 255, 255, 1);
+    /* Add a neon glow effect with text-shadow */
+    padding-bottom: 1.61rem;
+}
+
+
+/* Custom color variables */
 :root {
-    --white: #FEFCF3;
+    /* --white: #FEFCF3; */
+    --white: #ffffff;
     /* white color */
     --lightgrey: #CFD2CF;
     /* light gray color */
@@ -17,15 +32,14 @@
 
 
 
-/* Set margin, padding, and font-size to 0 for all elements */
+/* Reset default styles for all elements */
 * {
     margin: 0;
     padding: 0;
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
 }
-
-/* Set the font family, background image, and overflow to hidden for the body */
+/* Body styles */
 body {
     width: 100%;
     height: 100vh;
@@ -42,7 +56,7 @@ body {
     overflow: hidden;
 }
 
-/* Set styles for the heading element */
+/* Set\ heading element */
 .heading h1 {
     font-weight: 600;
     font-size: 2.77rem;
@@ -53,7 +67,7 @@ body {
     padding-bottom: 1.61rem;
 }
 
-/* Set styles for the content area element */
+/* styles for the content*/
 .content-area {
     display: flex;
     flex-direction: column;
@@ -61,25 +75,25 @@ body {
     justify-content: center;
     width: 100%;
     min-height: 100vh;
-    border: 1px solid beige;
+    border: 1px solid rgb(233, 245, 220);
 }
 
 
-/* Set styles for the text field element */
+/* styles for the text */
 .text-field {
+    height: 3.6rem;
     width: 30.33rem;
-    height: 3.61rem;
     margin-bottom: 1.61rem;
     display: flex;
     align-items: center;
     background-color: var(--white);
     background: #FFFCFC;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
+    border-radius: 4.1px;
 }
 
 
-/* Set styles for the text field input element */
+/* styles for input element */
 .text-field input {
     width: 90%;
     height: 100%;
@@ -126,7 +140,15 @@ body {
     background: #FFFCFC;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
-    border-bottom: 1px solid var(--lightgrey);
+    /* border-bottom: 8px solid var(--lightgrey); orignal */
+    /* border-bottom: 80px solid transparent; transparent */
+    /* border-radius: 1px; */
+    /* box-shadow: 0px 0px 0px 8px rgba(0,0,0,0.3); */
+
+    border: 10px solid rgba(0, 0, 0, 0.3);
+     border-radius: 10px;
+     background-clip: padding-box;
+   
 }
 
 
@@ -156,13 +178,13 @@ body {
 }
 
 
-/* Set styles for the todo name box element */
+/* todo name box element */
 .todo-name-box {
     width: 24.77rem;
 }
 
 
-/* Set styles for the todo name box span */
+/* odo name box span */
 .todo-name-box span {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
@@ -185,7 +207,7 @@ body {
 }
 
 
-/* Set styles for the complete class */
+/*styles for complete class */
 .complete {
     text-decoration: line-through;
     opacity: 0.4;
@@ -196,7 +218,7 @@ body {
 }
 
 
-/* Set styles for the delete icon id */
+/* styles for delete icon id */
 #delete-icon {
     width: 1.38rem;
     height: 1.38rem;
@@ -206,14 +228,14 @@ body {
 }
 
 
-/* Set hover effect on todos */
+/*styles forhover  */
 .todos:hover #delete-icon {
     cursor: pointer;
     opacity: 1;
 
 }
 
-/* Set styles for the todo info element */
+/* styles for the todo info element */
 .todo-info {
     width: 30.33rem;
     height: 2.22rem;
@@ -226,7 +248,7 @@ body {
 }
 
 
-/* Set hover effect on todo info element */
+/* styles for todo info element */
 .todo-info:hover {
     cursor: pointer;
 }
@@ -239,7 +261,7 @@ body {
     font-size: 12px;
     line-height: 16px;
     padding: 0.7rem 1rem;
-    color: var(--lightgrey);
+    color: var(--black);
 }
 
 
@@ -249,21 +271,21 @@ body {
     font-size: 12px;
     line-height: 16px;
     padding: 0.7rem 1rem;
-    color: var(--lightgrey);
+    color: var(--black);
 }
 
 /* Set styles for the uncomplete button */
-.uncomplete-todo {
+.incomplete-todo {
     padding: 0.1rem;
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
     padding: 0.7rem 1rem;
-    color: var(--lightgrey);
+    color: var(--black);
 }
 
 
-/* Set styles for completed button */
+/* styles for completed button */
 .completed-todo {
     padding-right: 1rem;
     padding: 0.1rem;
@@ -271,13 +293,13 @@ body {
     font-size: 12px;
     line-height: 16px;
     padding: 0.7rem 1rem;
-    color: var(--lightgrey);
+    color: var(--black);
 
 
 }
 
 
-/* Set styles for all todo button */
+/* styles for all todo button */
 .all-todo {
     padding: 0.1rem;
     font-weight: 400;
@@ -287,14 +309,14 @@ body {
     color: var(--lightgrey);
 }
 
-/* Set styles for the toggle check button */
+
 .check-active {
     background-color: #6FC3CE;
     opacity: 15%;
 }
 
 
-/* Set styles for the toggle check image */
+
 .check-active img {
     margin-left: 0.16rem;
     width: 0.83rem;
@@ -303,7 +325,7 @@ body {
 }
 
 
-/* Set styles for the tasks Left element */
+/* ts Left element */
 #tasksLeft {
     color: var(--black);
     font-weight: 500;
@@ -315,7 +337,7 @@ body {
 
 
 
-/* Set styles for the active when user click button */
+/* click button */
 .active {
     cursor: pointer;
     padding: 0.1rem;
@@ -327,7 +349,7 @@ body {
 }
 
 
-/* Set Set Media Querys for Mobile Medium Devices */
+/* Medium Devices */
 @media only screen and (max-width: 543px) {
 
     html {
@@ -335,7 +357,7 @@ body {
     }
 }
 
-/* Set Media Querys for Mobile Small Devices */
+/*Media QuerysSmall Devices */
 @media only screen and (max-width: 479px) {
 
     html {
@@ -373,7 +395,3 @@ body {
 
 
 }
-
-
-
-/* CSS End Here */
